@@ -3,13 +3,18 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>yes24</title>
       <link rel="stylesheet" href="css/style.css" />
+      <link
+         rel="stylesheet"
+         href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      />
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    </head>
    <body>
       <header>
          <div id="web_header">
-            <div class="header_logo"></div>
+            <a href="index.html"><div class="header_logo"></div></a>
             <nav>
                <ul>
                   <a href="#INFO"><li>INFO</li></a>
@@ -18,7 +23,6 @@
                   <a href="#EVENT"><li>EVENT</li></a>
                </ul>
             </nav>
-
             <div class="user">
                <div class="login">로그인</div>
                <div class="join">회원가입</div>
@@ -29,13 +33,37 @@
       </header>
       <main>
          <div class="main_section">
+            <div class="main_section_content">
+               <p>대한민국 1등 온라인 서점 예스 24</p>
+               <p>
+                  새로운 가능성을 도모하는 적극적이고 진취적인 태도로 <br />
+                  최신 트렌드를 선도합니다
+               </p>
+               <div><a href="#TREND">최신 트렌드 보러가기</a></div>
+            </div>
             <div class="img_back"></div>
          </div>
          <div class="info_back"></div>
          <div id="wrap">
             <section id="INFO">
                <div class="info_img"></div>
-               <div class="info_content"></div>
+               <div class="info_content">
+                  <h1>문화 콘텐츠 플랫폼 yes24</h1>
+                  <p>
+                     문화콘텐츠 자체보다 그 안의 내용을 향유하며 각자가 얻는
+                     가치가 중요합니다.
+                  </p>
+                  <p>
+                     우리는 책과 공연, 웹툰/웹소설, NFT 아트 등 문화 생활의
+                     즐거움을 선사하고 사람들에게 보다 나은 일상을 살아가기 위한
+                     활력과 동기를 불어넣습니다. 예스24는 사람들이 다양한
+                     문화·예술 콘텐츠를 통해 영감을 얻고 진취적인 태도로 삶을 더
+                     의미있게 향유하는 것을 돕습니다.
+                  </p>
+                  <p>
+                     이것이 예스24가 생각하는 문화콘텐츠 플랫폼의 본질입니다.
+                  </p>
+               </div>
             </section>
             <h1>CORE VALUE</h1>
             <section id="VALUE">
@@ -75,16 +103,63 @@
             <h1>TREND</h1>
             <section id="TREND">
                <div class="top">
-                  <img src="img/trend01.jpg" alt="" />
-                  <div class="trend_content">
-                     <p>듀얼 브레인</p>
-                     <p>이선 몰릭 <span>/ 저자</span></p>
-                     <p>신동숙 <span>/ 역식자</span></p>
-                     <div><span>#미래의 일자리</span></div>
-                     <div><span>#미래를 그리다</span></div>
-                     <div><span>#미래전략</span></div>
-                     <div><span>#AI관련서</span></div>
-                     <div><button>보러가기</button></div>
+                  <div class="top_book01">
+                     <img src="img/trend01.jpg" alt="" />
+                     <div class="trend_content">
+                        <p>듀얼 브레인</p>
+                        <p>이선 몰릭 <span>/ 저자</span></p>
+                        <p>신동숙 <span>/ 역식자</span></p>
+                        <div><span>#미래의 일자리</span></div>
+                        <div><span>#미래를 그리다</span></div>
+                        <div><span>#미래전략</span></div>
+                        <div><span>#AI관련서</span></div>
+                        <a href="https://www.yes24.com/product/goods/142876017"
+                           ><div><button>보러가기</button></div></a
+                        >
+                     </div>
+                  </div>
+                  <div class="top_book02" style="display: none">
+                     <img src="img/trend02.jpg" alt="" />
+                     <div class="trend_content">
+                        <p>소년이 온다</p>
+                        <p>한강 <span>/ 저자</span></p>
+                        <div><span>#해외문학상_우리작가</span></div>
+                        <div><span>#노벨문학상수상작가</span></div>
+                        <div><span>#가을에어울리는책</span></div>
+                        <div><span>#KBS우리시대의소설</span></div>
+                        <a href="https://www.yes24.com/product/goods/13137546"
+                           ><div><button>보러가기</button></div></a
+                        >
+                     </div>
+                  </div>
+                  <div class="top_book03" style="display: none">
+                     <img src="img/trend03.jpg" alt="" />
+                     <div class="trend_content">
+                        <p>하루 한 장 나의 어휘력을 위한 필사 노트</p>
+                        <p>유선경 <span>/ 저자</span></p>
+                        <div><span>#어휘력</span></div>
+                        <div><span>#문해력</span></div>
+                        <div><span>#필사</span></div>
+                        <div><span>#쓰는맛</span></div>
+                        <a href="https://www.yes24.com/product/goods/125557465"
+                           ><div><button>보러가기</button></div></a
+                        >
+                     </div>
+                  </div>
+                  <div class="top_book04" style="display: none">
+                     <img src="img/trend04.jpg" alt="" />
+                     <div class="trend_content">
+                        <p>이기적 유전자</p>
+                        <p>리처드 도킨스 <span>/ 저자</span></p>
+                        <p>홍영남, 이상임 <span>/ 역식자</span></p>
+                        <div><span>#페이커가읽은책책</span></div>
+                        <div><span>#인문위클리레터에소개된책</span></div>
+                        <div><span>#tvN비밀독서단추천도서</span></div>
+                        <div><span>#EBS위대한수업</span></div>
+                        <a href="https://www.yes24.com/product/goods/65067259"
+                           ><div><button>보러가기</button></div></a
+                        >
+                     </div>
                   </div>
                </div>
                <div class="bottom">
@@ -102,12 +177,86 @@
                   </article>
                </div>
             </section>
-
-            <section id="EVENT">
-               <h1>EVENT</h1>
-            </section>
          </div>
+         <section id="EVENT">
+            <div id="wrap">
+               <h1>EVENT</h1>
+               <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <a
+                           href="https://event.yes24.com/template?EventNo=251782"
+                           ><img src="img/event_slide/slide01.jpg" alt=""
+                        /></a>
+                        <a href="https://event.yes24.com/detail?eventNo=255221"
+                           ><img src="img/event_slide/slide02.jpg" alt=""
+                        /></a>
+                        <a href="https://event.yes24.com/detail?eventNo=254937"
+                           ><img src="img/event_slide/slide03.jpg" alt=""
+                        /></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a
+                           href="https://event.yes24.com/template?EventNo=256025"
+                           ><img src="img/event_slide/slide04.jpg" alt=""
+                        /></a>
+                        <a href="https://event.yes24.com/detail?eventNo=254488"
+                           ><img src="img/event_slide/slide05.jpg" alt=""
+                        /></a>
+                        <a
+                           href="https://event.yes24.com/template?EventNo=254073"
+                           ><img src="img/event_slide/slide06.jpg" alt=""
+                        /></a>
+                     </div>
+                     <div class="swiper-slide">
+                        <a
+                           href="https://event.yes24.com/template?EventNo=254728"
+                           ><img src="img/event_slide/slide07.jpg" alt=""
+                        /></a>
+                        <a
+                           href="https://event.yes24.com/template?EventNo=255328"
+                           ><img src="img/event_slide/slide08.jpg" alt=""
+                        /></a>
+                        <a
+                           href="https://event.yes24.com/template?EventNo=256183"
+                           ><img src="img/event_slide/slide09.jpg" alt=""
+                        /></a>
+                     </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+               </div>
+            </div>
+         </section>
       </main>
-      <footer></footer>
+      <footer>
+         <div id="wrap">
+            <div class="link_yes24">
+               <p>YES24, 문화 콘텐츠의 새로운 장을 열다</p>
+               <a href="https://www.yes24.com/main/default.aspx">홈페이지로</a>
+            </div>
+            <div class="footer_bottom">
+               <div class="footer_content">
+                  <img src="img/footerLogo.png" alt="" />
+                  <p>
+                     서울시 영등포구 은행로 11, 5~6층 (여의도동, 일신빌딩)
+                     <br />고객만족센터 : 1544-3800 | 대표김석환, 최세라
+                     <br />개인정보보호책임자 : 권민석 yes24help@yes24.com
+                  </p>
+               </div>
+               <p>
+                  <a href="https://www.yes24.com/notice/service.aspx"
+                     >이용약관</a
+                  >
+                  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                  <a href="https://www.yes24.com/notice/privacypolicy.aspx"
+                     >개인정보취급방침</a
+                  >
+                  &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                  <a href="https://company.yes24.com/career">인재채용</a>
+               </p>
+            </div>
+         </div>
+      </footer>
+      <script src="js/main.js"></script>
    </body>
 </html>

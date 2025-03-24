@@ -9,6 +9,7 @@
 a {
    color: white;
    text-decoration: none;
+   cursor: pointer;
 }
 
 #wrap {
@@ -41,6 +42,7 @@ header #web_header .header_logo {
    background: url(../img/mainLogo.png) 50% 50% no-repeat;
    background-size: 100%;
    width: 125px;
+   height: 100%;
 }
 
 header #web_header nav ul {
@@ -82,6 +84,29 @@ main .main_section .img_back {
    background-color: black;
    height: 100vh;
    opacity: 0.6;
+}
+main .main_section .main_section_content {
+   position: absolute;
+   display: flex;
+   flex-direction: column;
+   bottom: 0;
+   color: white;
+   z-index: 1;
+   gap: 20px;
+   padding: 100px;
+}
+main .main_section .main_section_content p {
+   font-size: 40px;
+   font-weight: bold;
+}
+main .main_section .main_section_content p:nth-child(2) {
+   margin-bottom: 40px;
+}
+main .main_section .main_section_content a {
+   border-radius: 30px;
+   background-color: #0080ff;
+   font-size: 24px;
+   padding: 10px 20px;
 }
 section {
    margin-bottom: 100px;
@@ -161,7 +186,10 @@ main #TREND {
    padding: 40px;
 }
 
-main #TREND .top {
+main #TREND .top .top_book01,
+.top_book02,
+.top_book03,
+.top_book04 {
    display: flex;
    width: 100%;
    gap: 50px;
@@ -170,12 +198,13 @@ main #TREND .top {
 }
 main #TREND .top img {
    width: 300px;
+   height: 430px;
 }
 main #TREND .top .trend_content {
    display: flex;
    gap: 10px;
    flex-direction: column;
-   width: 35%;
+   width: 40%;
 }
 
 main #TREND .top .trend_content p:first-child {
@@ -206,8 +235,9 @@ main #TREND .top .trend_content div span {
 main #TREND .top .trend_content div button {
    background-color: #0080ff;
    color: white;
-   padding: 5px 15px;
+   padding: 10px 20px;
    border: none;
+   font-size: 16px;
    border-radius: 20px;
    cursor: pointer;
 }
@@ -234,3 +264,70 @@ main #TREND .bottom article img {
 }
 
 /* main - EVENT */
+main #EVENT {
+   background: url(../img/event_banner.png);
+   padding: 40px;
+}
+
+main #EVENT .swiper-container {
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+}
+main #EVENT .swiper-container .swiper-wrapper .swiper-slide {
+   display: flex;
+   margin: 40px 0px;
+   justify-content: space-around;
+   align-items: center;
+   text-align: center;
+   position: relative;
+}
+main #EVENT .swiper-container .swiper-wrapper .swiper-slide a {
+   width: 32%;
+}
+main #EVENT .swiper-container .swiper-wrapper .swiper-slide img {
+   width: 100%;
+   object-fit: cover;
+   border-radius: 20px;
+}
+
+/* footer */
+footer {
+   padding: 50px 50px 20px 50px;
+   background-color: #041242;
+   color: white;
+}
+
+footer .link_yes24 {
+   text-align: center;
+   border-bottom: 1px solid #8289a1;
+   padding-bottom: 50px;
+}
+footer .link_yes24 p {
+   font-size: 30px;
+   margin-bottom: 40px;
+}
+footer .link_yes24 a {
+   background-color: white;
+   color: #0080ff;
+   font-weight: bold;
+   padding: 10px 15px;
+   border-radius: 20px;
+   font-size: 20px;
+}
+
+footer .footer_bottom {
+   padding: 50px 50px 0px 50px;
+}
+footer .footer_bottom .footer_content {
+   display: flex;
+   gap: 100px;
+   margin-bottom: 50px;
+}
+footer .footer_bottom .footer_content img {
+   width: 200px;
+}
+
+footer .footer_bottom > p {
+   text-align: center;
+}
