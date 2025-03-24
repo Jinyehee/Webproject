@@ -45,11 +45,11 @@ header #web_header .header_logo {
 
 header #web_header nav ul {
    display: flex;
-   gap: 30px;
+   gap: 50px;
 }
 header #web_header nav ul li {
-   font-size: 16px;
-   font-weight: bold;
+   font-size: 20px;
+   font-weight: 500;
    line-height: 40px;
 }
 
@@ -59,10 +59,10 @@ header #web_header .user {
    gap: 10px;
 }
 header #web_header .user .login {
-   font-size: 12px;
+   font-size: 16px;
 }
 header #web_header .user .join {
-   font-size: 12px;
+   font-size: 16px;
 }
 header #web_header .user .search {
    background-color: white;
@@ -84,7 +84,7 @@ main .main_section .img_back {
    opacity: 0.6;
 }
 section {
-   margin-bottom: 50px;
+   margin-bottom: 100px;
 }
 
 /* main - INFO */
