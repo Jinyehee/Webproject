@@ -32,6 +32,7 @@ h1 {
    margin-bottom: 30px;
 }
 /* header */
+/* web */
 header {
    /* background-color: #0080ff; */
    position: fixed;
@@ -40,7 +41,6 @@ header {
    z-index: 999;
 }
 
-/* web */
 header #web_header {
    display: flex;
    justify-content: space-between;
@@ -83,8 +83,72 @@ header #web_header .user .search {
    border-radius: 10px;
    text-align: center;
 }
+header #web_header .show_mobile {
+   display: none;
+   background-image: url(../img/menu.png);
+   width: 40px;
+   background-size: cover;
+}
+
+/* mobile_menu */
+header #mobile_menu {
+   background-color: white;
+   width: 100%;
+   height: 100vh;
+   color: #202020;
+   padding: 50px;
+   display: none;
+}
+header #mobile_menu .menu_content {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+header #mobile_menu .menu_content .user {
+   border-bottom: 1px solid #dadada;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.login,
+.join {
+   text-align: right;
+   padding-right: 10px;
+}
+header #mobile_menu .menu_content .user .search {
+   background-color: #e6e6e6;
+   padding: 10px 15px;
+   border-radius: 20px;
+}
+header #mobile_menu nav {
+   padding: 20px;
+   text-align: right;
+}
+header #mobile_menu nav ul li {
+   padding-right: 10px;
+   margin-bottom: 20px;
+   font-size: 24px;
+}
+header #mobile_menu nav ul li a {
+   color: black;
+}
+/* mobile */
+@media (max-width: 768px) {
+   header #web_header nav {
+      display: none;
+   }
+   header #web_header .user {
+      display: none;
+   }
+   header #web_header .show_mobile {
+      display: block;
+   }
+}
 
 /* main */
+/* web */
 main .main_section {
    height: 100vh;
    background: url(../img/main_top.jpg) 50% 50% no-repeat;
@@ -122,8 +186,41 @@ main .main_section .main_section_content a {
 section {
    margin-bottom: 100px;
 }
-
+/* Tab */
+@media (max-width: 1024px) {
+   main .main_section .main_section_content {
+      padding: 100px;
+   }
+   main .main_section .main_section_content p {
+      font-size: 30px;
+      font-weight: bold;
+   }
+   main .main_section .main_section_content a {
+      font-size: 20px;
+   }
+}
+/* mobile */
+@media (max-width: 768px) {
+   main .main_section {
+      position: relative;
+   }
+   main .main_section .main_section_content {
+      padding: 0;
+      text-align: center;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+   main .main_section .main_section_content p {
+      font-size: 18px;
+      font-weight: bold;
+   }
+   main .main_section .main_section_content a {
+      font-size: 16px;
+   }
+}
 /* main - INFO */
+/* web */
 main #INFO {
    display: flex;
    padding: 60px;
@@ -158,7 +255,52 @@ main #INFO .info_content p {
    font-size: 21px;
    line-height: 1.6;
 }
+/* Tab */
+@media (max-width: 1024px) {
+   main #INFO .info_img {
+      height: 400px;
+   }
+   main #INFO .info_content h2 {
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 20px;
+   }
+   main #INFO .info_content p {
+      font-size: 16px;
+      line-height: 1.6;
+   }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+   main #INFO .info_img {
+      width: 80%;
+      background-position: 100%;
+   }
+   main #INFO {
+      align-items: center;
+      flex-direction: column-reverse;
+      gap: 30px;
+   }
+   main #INFO .info_content {
+      text-align: center;
+      width: 100%;
+      gap: 10px;
+   }
+   main #INFO .info_content h2 {
+      text-align: center;
+      font-size: 18px;
+   }
+   main #INFO .info_content p {
+      font-size: 14px;
+      line-height: 1.6;
+      width: 100%;
+      gap: 15px;
+   }
+}
+
 /* main - VALUE */
+/* web */
 main #VALUE {
    display: flex;
    flex-wrap: wrap;
@@ -202,8 +344,45 @@ main #VALUE article p {
    font-size: 18px;
    font-weight: 500;
 }
+/* Tab */
+@media (max-width: 1024px) {
+   main #VALUE {
+      gap: 40px;
+      justify-content: space-around;
+   }
+   main #VALUE article {
+      width: 40%;
+   }
+   main #VALUE article:first-child img,
+   main #VALUE article:nth-child(2) img,
+   main #VALUE article:nth-child(3) img,
+   main #VALUE article:last-child img {
+      height: 250px;
+   }
+   main #VALUE article h4 {
+      font-size: 20px;
+   }
+   main #VALUE article p {
+      font-size: 16px;
+   }
+}
 
+/* mobile */
+@media (max-width: 768px) {
+   main #VALUE {
+      display: block;
+   }
+   main #VALUE article:nth-child(2n) {
+      position: relative;
+      right: 0;
+      margin-left: auto;
+   }
+   main #VALUE article {
+      margin-bottom: 10px;
+   }
+}
 /* main - TREND */
+/* web */
 main #TREND {
    display: flex;
    flex-direction: column;
@@ -230,7 +409,7 @@ main #TREND .top .trend_content {
    display: flex;
    gap: 10px;
    flex-direction: column;
-   width: 40%;
+   width: 50%;
 }
 
 main #TREND .top .trend_content p:first-child {
@@ -289,7 +468,42 @@ main #TREND .bottom article img {
    object-fit: cover;
 }
 
+/* Tab */
+@media (max-width: 1024px) {
+   main #TREND .bottom article {
+      min-width: 100px;
+   }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+   main #TREND .top img {
+      width: 150px;
+      height: 230px;
+   }
+   main #TREND .top .trend_content {
+      justify-content: space-between;
+      gap: 0;
+   }
+   main #TREND .top .trend_content p:first-child {
+      font-size: 20px;
+   }
+   main #TREND .top .trend_content p {
+      font-size: 14px;
+   }
+   main #TREND .top .trend_content p:nth-child(3) {
+      margin-bottom: 10px;
+   }
+   main #TREND .top .trend_content div span {
+      font-size: 12px;
+   }
+   main #TREND .top .trend_content div button {
+      font-size: 12px;
+   }
+}
+
 /* main - EVENT */
+/* web and tab */
 main #EVENT {
    background: url(../img/event_banner.png);
    padding: 40px;
@@ -315,6 +529,16 @@ main #EVENT .swiper-container .swiper-wrapper .swiper-slide img {
    width: 100%;
    object-fit: cover;
    border-radius: 20px;
+}
+/* mobile */
+@media (max-width: 768px) {
+   main #EVENT .swiper-container .swiper-wrapper .swiper-slide a {
+      width: 80%;
+   }
+   main #EVENT .swiper-container .swiper-wrapper .swiper-slide a:nth-child(2),
+   .swiper-slide a:nth-child(3) {
+      display: none;
+   }
 }
 
 /* footer */
