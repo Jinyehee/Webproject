@@ -1,3 +1,11 @@
+@font-face {
+   font-family: "Pretendard-Regular";
+   src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+      format("woff");
+   font-weight: 400;
+   font-style: normal;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -5,6 +13,7 @@
    list-style: none;
    scroll-behavior: smooth;
    scroll-padding-top: 150px;
+   font-family: "Pretendard-Regular";
 }
 a {
    color: white;
@@ -20,6 +29,7 @@ a {
 h1 {
    text-align: center;
    font-size: 40px;
+   margin-bottom: 30px;
 }
 /* header */
 header {
@@ -93,10 +103,10 @@ main .main_section .main_section_content {
    color: white;
    z-index: 1;
    gap: 20px;
-   padding: 100px;
+   padding: 150px;
 }
 main .main_section .main_section_content p {
-   font-size: 40px;
+   font-size: 50px;
    font-weight: bold;
 }
 main .main_section .main_section_content p:nth-child(2) {
@@ -107,6 +117,7 @@ main .main_section .main_section_content a {
    background-color: #0080ff;
    font-size: 24px;
    padding: 10px 20px;
+   font-weight: 600;
 }
 section {
    margin-bottom: 100px;
@@ -117,6 +128,7 @@ main #INFO {
    display: flex;
    padding: 60px;
    margin-top: 80px;
+   justify-content: space-between;
 }
 .info_back {
    background: linear-gradient(to bottom, #d9d9d9, #ffffff);
@@ -128,10 +140,24 @@ main #INFO {
 main #INFO .info_img {
    background: url(../img/info.jpg) 50% 50% no-repeat;
    background-size: cover;
-   width: 400px;
+   width: 40%;
    height: 500px;
 }
-
+main #INFO .info_content {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 50%;
+}
+main #INFO .info_content h2 {
+   font-size: 30px;
+   text-align: right;
+   margin-bottom: 30px;
+}
+main #INFO .info_content p {
+   font-size: 21px;
+   line-height: 1.6;
+}
 /* main - VALUE */
 main #VALUE {
    display: flex;
