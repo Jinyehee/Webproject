@@ -1,3 +1,36 @@
+// 헤더 스타일 변경
+const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+   if (window.scrollY > 0) {
+      header.classList.add("on");
+   } else {
+      header.classList.remove("on");
+   }
+});
+
+// 모바일 메뉴
+const showMobile = document.querySelector(".show_mobile");
+const mobileMenu = document.querySelector("#mobile_menu");
+showMobile.addEventListener("click", function () {
+   header.classList.toggle("on_click");
+
+   if (mobileMenu.style.display === "block") {
+      mobileMenu.style.display = "none";
+   } else {
+      mobileMenu.style.display = "block";
+   }
+});
+
+const menuLinks = document.querySelectorAll("#mobile_menu a");
+
+menuLinks.forEach((link) => {
+   link.addEventListener("click", function () {
+      mobileMenu.style.display = "none";
+      header.classList.remove("on_click");
+   });
+});
+
+// 슬라이드
 const mySwiper = new Swiper(".swiper-container", {
    direction: "horizontal",
    loop: true,
@@ -14,41 +47,47 @@ const mySwiper = new Swiper(".swiper-container", {
    },
 });
 
+// 트렌드 책 보이게하기
 document.addEventListener("DOMContentLoaded", function () {
-   const book1 = document.querySelector(".book01");
-   const book2 = document.querySelector(".book02");
-   const book3 = document.querySelector(".book03");
-   const book4 = document.querySelector(".book04");
+   const books = document.querySelectorAll(
+      ".book01, .book02, .book03, .book04"
+   );
+   const topBooks = document.querySelectorAll(
+      ".top_book01, .top_book02, .top_book03, .top_book04"
+   );
 
-   const topBook1 = document.querySelector(".top_book01");
-   const topBook2 = document.querySelector(".top_book02");
-   const topBook3 = document.querySelector(".top_book03");
-   const topBook4 = document.querySelector(".top_book04");
-
-   function hideTopBooks() {
-      topBook1.style.display = "none";
-      topBook2.style.display = "none";
-      topBook3.style.display = "none";
-      topBook4.style.display = "none";
+   function showTopBook(index) {
+      topBooks.forEach((topBook, i) => {
+         topBook.style.display = i === index ? "flex" : "none";
+      });
    }
 
-   book1.addEventListener("click", function () {
-      hideTopBooks();
-      topBook1.style.display = "flex";
+   books.forEach((book, index) => {
+      book.addEventListener("click", function () {
+         showTopBook(index);
+      });
    });
+});
 
-   book2.addEventListener("click", function () {
-      hideTopBooks();
-      topBook2.style.display = "flex";
-   });
+// 애니메이션
+document.addEventListener("DOMContentLoaded", function () {
+   const sections = document.querySelectorAll(
+      ".main_section_content, .info_img, .info_content, .first_article, .second_article, .third_article, .four_article"
+   );
 
-   book3.addEventListener("click", function () {
-      hideTopBooks();
-      topBook3.style.display = "flex";
-   });
+   const observer = new IntersectionObserver(
+      (entries, observer) => {
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               entry.target.classList.add("visible");
+               observer.unobserve(entry.target);
+            }
+         });
+      },
+      { threshold: 0.5 }
+   );
 
-   book4.addEventListener("click", function () {
-      hideTopBooks();
-      topBook4.style.display = "flex";
+   sections.forEach((section) => {
+      observer.observe(section);
    });
 });

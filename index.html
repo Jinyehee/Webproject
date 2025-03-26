@@ -5,12 +5,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>yes24</title>
       <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/header.css" />
+      <link rel="stylesheet" href="css/main.css" />
+      <link rel="stylesheet" href="css/footer.css" />
+      <link rel="stylesheet" href="css/animation.css" />
       <link
          rel="stylesheet"
          href="https://unpkg.com/swiper/swiper-bundle.min.css"
       />
       <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
    </head>
+
    <body>
       <header>
          <div id="web_header">
@@ -26,7 +31,11 @@
             <div class="user">
                <div class="login">로그인</div>
                <div class="join">회원가입</div>
-               <div class="search"><img src="img/search.png" alt="검색" /></div>
+               <div class="search">
+                  <a href="search.html"
+                     ><img src="img/search.png" alt="검색"
+                  /></a>
+               </div>
             </div>
             <div class="show_mobile"></div>
          </div>
@@ -90,7 +99,7 @@
             </section>
             <h1>CORE VALUE</h1>
             <section id="VALUE">
-               <article>
+               <article class="first_article">
                   <h4>INTEGRITY</h4>
                   <img src="img/coreValue01.jpg" alt="" />
                   <p>
@@ -98,7 +107,7 @@
                      수준 높은 서비스 경험
                   </p>
                </article>
-               <article>
+               <article class="second_article">
                   <h4>POSSIBILITY</h4>
                   <img src="img/coreValue02.jpg" alt="" />
                   <p>
@@ -106,7 +115,7 @@
                      적극적이고 진취적인 태도
                   </p>
                </article>
-               <article>
+               <article class="third_article">
                   <h4>CONNECTIVITY</h4>
                   <img src="img/coreValue03.jpg" alt="" />
                   <p>
@@ -114,7 +123,7 @@
                      컬쳐 소사이어티 플랫폼
                   </p>
                </article>
-               <article>
+               <article class="four_article">
                   <h4>SUSTAINABILITY</h4>
                   <img src="img/coreValue04.jpg" alt="" />
                   <p>
@@ -141,7 +150,7 @@
                         >
                      </div>
                   </div>
-                  <div class="top_book02" style="display: none">
+                  <div class="top_book02">
                      <img src="img/trend02.jpg" alt="" />
                      <div class="trend_content">
                         <p>소년이 온다</p>
@@ -155,10 +164,13 @@
                         >
                      </div>
                   </div>
-                  <div class="top_book03" style="display: none">
+                  <div class="top_book03">
                      <img src="img/trend03.jpg" alt="" />
                      <div class="trend_content">
-                        <p>하루 한 장 나의 어휘력을 위한 필사 노트</p>
+                        <p>
+                           하루 한 장 나의 어휘력을 <br />
+                           위한 필사 노트
+                        </p>
                         <p>유선경 <span>/ 저자</span></p>
                         <div><span>#어휘력</span></div>
                         <div><span>#문해력</span></div>
@@ -169,7 +181,7 @@
                         >
                      </div>
                   </div>
-                  <div class="top_book04" style="display: none">
+                  <div class="top_book04">
                      <img src="img/trend04.jpg" alt="" />
                      <div class="trend_content">
                         <p>이기적 유전자</p>
@@ -281,5 +293,6 @@
          </div>
       </footer>
       <script src="js/main.js"></script>
+      <script></script>
    </body>
 </html>
