@@ -30,6 +30,13 @@ menuLinks.forEach((link) => {
    });
 });
 
+window.addEventListener("resize", function () {
+   if (window.innerWidth >= 768) {
+      mobileMenu.style.display = "none";
+      header.classList.remove("on_click");
+   }
+});
+
 // 슬라이드
 const mySwiper = new Swiper(".swiper-container", {
    direction: "horizontal",
