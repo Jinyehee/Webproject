@@ -73,6 +73,14 @@ section {
       font-size: 14px;
    }
 }
+@media (max-width: 390px) {
+   main .main_section .main_section_content p {
+      font-size: 12px;
+   }
+   main .main_section .main_section_content a {
+      font-size: 14px;
+   }
+}
 /* main - INFO */
 /* web */
 main #INFO {
@@ -143,10 +151,10 @@ main #INFO .info_content p {
    }
    main #INFO .info_content h2 {
       text-align: center;
-      font-size: 18px;
+      font-size: 20px;
    }
    main #INFO .info_content p {
-      font-size: 14px;
+      font-size: 16px;
       line-height: 1.6;
       width: 100%;
       gap: 15px;
@@ -154,7 +162,7 @@ main #INFO .info_content p {
 }
 @media (max-width: 500px) {
    main #INFO .info_content p {
-      font-size: 12px;
+      font-size: 14px;
    }
 }
 
@@ -253,13 +261,9 @@ main #TREND .top {
    width: 100%;
 }
 
-main #TREND .top .top_book01,
-.top_book02,
-.top_book03,
-.top_book04 {
+main #TREND .top div {
    width: 100%;
    gap: 50px;
-   align-items: center;
    justify-content: center;
 }
 main #TREND .top .top_book01 {
@@ -380,6 +384,9 @@ main #TREND .top > div {
    main #TREND .top .trend_content div button {
       font-size: 12px;
    }
+   main #TREND .top div {
+      gap: 40px;
+   }
 }
 @media (max-width: 630px) and (min-width: 430px) {
    main #TREND .bottom .down {
@@ -401,6 +408,9 @@ main #TREND .top > div {
    }
    main #TREND .top .trend_content div span {
       font-size: 10px;
+   }
+   main #TREND .top div {
+      gap: 30px;
    }
 }
 /* main - EVENT */
