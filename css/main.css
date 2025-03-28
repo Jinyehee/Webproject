@@ -373,7 +373,20 @@ main #TREND .top > div {
       font-size: 12px;
    }
 }
-
+@media (max-width: 630px) and (min-width: 430px) {
+   main #TREND .bottom .down {
+      flex-basis: 100%; /* 새로운 줄로 내리기 */
+      max-width: 18%; /* 크기 조정 */
+   }
+   main #TREND .bottom article.book01,
+   .book03 {
+      margin-left: 10%;
+   }
+   main #TREND .bottom article.book02,
+   .book04 {
+      margin-right: 10%;
+   }
+}
 /* main - EVENT */
 /* web and tab */
 main #EVENT {
