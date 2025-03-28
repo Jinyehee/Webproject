@@ -74,6 +74,9 @@ section {
    }
 }
 @media (max-width: 390px) {
+   main .main_section .main_section_content {
+      width: 100%;
+   }
    main .main_section .main_section_content p {
       font-size: 12px;
    }
