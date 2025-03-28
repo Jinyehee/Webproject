@@ -44,7 +44,6 @@ section {
    }
    main .main_section .main_section_content p {
       font-size: 30px;
-      font-weight: bold;
    }
    main .main_section .main_section_content a {
       font-size: 20px;
@@ -64,10 +63,14 @@ section {
    }
    main .main_section .main_section_content p {
       font-size: 18px;
-      font-weight: bold;
    }
    main .main_section .main_section_content a {
       font-size: 16px;
+   }
+}
+@media (max-width: 500px) {
+   main .main_section .main_section_content p {
+      font-size: 14px;
    }
 }
 /* main - INFO */
@@ -147,6 +150,11 @@ main #INFO .info_content p {
       line-height: 1.6;
       width: 100%;
       gap: 15px;
+   }
+}
+@media (max-width: 500px) {
+   main #INFO .info_content p {
+      font-size: 12px;
    }
 }
 
@@ -385,6 +393,14 @@ main #TREND .top > div {
    main #TREND .bottom article.book02,
    .book04 {
       margin-right: 10%;
+   }
+}
+@media (max-width: 500px) {
+   main #TREND .top .trend_content p {
+      font-size: 12px;
+   }
+   main #TREND .top .trend_content div span {
+      font-size: 10px;
    }
 }
 /* main - EVENT */
