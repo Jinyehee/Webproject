@@ -28,7 +28,7 @@ header #web_header .header_logo {
    background: url(../img/mainLogo.png) 50% 50% no-repeat;
    background-size: 100%;
    width: 125px;
-   height: 100%;
+   height: 50px;
 }
 
 header #web_header nav ul {
